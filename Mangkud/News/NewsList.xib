@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsList">
+            <connections>
+                <outlet property="myCollectionView" destination="5Lm-Xg-Fas" id="Tf6-qK-N5c"/>
+                <outlet property="myLayout" destination="5Lm-Xg-Fas" id="HdX-Lm-10F"/>
+                <outlet property="view" destination="iJ1-mC-fwM" id="b3D-zo-QTH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iJ1-mC-fwM">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcX-UJ-p4L">
+                    <rect key="frame" x="0.0" y="20" width="375" height="53.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-Vr-vea">
+                            <rect key="frame" x="123" y="8" width="129" height="37.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="wNq-Vr-vea" secondAttribute="height" multiplier="239:69" id="403-bZ-cxX"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D69-X1-f02">
+                            <rect key="frame" x="9.5" y="14.5" width="35" height="29.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="D69-X1-f02" secondAttribute="height" multiplier="59:50" id="GK8-hj-DN6"/>
+                            </constraints>
+                            <state key="normal" image="Home_sidemenu"/>
+                            <connections>
+                                <action selector="showLeftMenuPressed:" destination="-1" eventType="touchUpInside" id="TPo-6d-Go3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kS3-bS-FUe">
+                            <rect key="frame" x="325.5" y="18.5" width="31" height="21.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="kS3-bS-FUe" secondAttribute="height" multiplier="17:12" id="Liy-Dx-xbS"/>
+                            </constraints>
+                            <state key="normal" image="Home_letter"/>
+                            <connections>
+                                <action selector="rightMenu:" destination="-1" eventType="touchUpInside" id="zLm-mE-qKt"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="kS3-bS-FUe" firstAttribute="centerY" secondItem="DcX-UJ-p4L" secondAttribute="centerY" multiplier="1.1" id="6aC-1y-7g1"/>
+                        <constraint firstItem="wNq-Vr-vea" firstAttribute="centerX" secondItem="DcX-UJ-p4L" secondAttribute="centerX" id="8RY-74-7tS"/>
+                        <constraint firstAttribute="width" secondItem="DcX-UJ-p4L" secondAttribute="height" multiplier="7:1" id="KxG-07-3g1"/>
+                        <constraint firstItem="D69-X1-f02" firstAttribute="height" secondItem="DcX-UJ-p4L" secondAttribute="height" multiplier="0.55" id="Mh1-Sl-Hs7"/>
+                        <constraint firstItem="D69-X1-f02" firstAttribute="leading" secondItem="DcX-UJ-p4L" secondAttribute="centerX" multiplier="0.05" id="cqW-0Q-nUS"/>
+                        <constraint firstItem="wNq-Vr-vea" firstAttribute="height" secondItem="DcX-UJ-p4L" secondAttribute="height" multiplier="0.7" id="q2e-DL-IfG"/>
+                        <constraint firstItem="D69-X1-f02" firstAttribute="centerY" secondItem="DcX-UJ-p4L" secondAttribute="centerY" multiplier="1.1" id="qgP-Wm-Qo1"/>
+                        <constraint firstItem="wNq-Vr-vea" firstAttribute="centerY" secondItem="DcX-UJ-p4L" secondAttribute="centerY" id="quW-0n-1Mp"/>
+                        <constraint firstItem="kS3-bS-FUe" firstAttribute="height" secondItem="DcX-UJ-p4L" secondAttribute="height" multiplier="0.4" id="tfy-gZ-6l5"/>
+                        <constraint firstItem="kS3-bS-FUe" firstAttribute="trailing" secondItem="DcX-UJ-p4L" secondAttribute="centerX" multiplier="1.9" id="z9E-y4-vRn"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Lm-Xg-Fas">
+                    <rect key="frame" x="0.0" y="73.5" width="375" height="593.5"/>
+                    <color key="backgroundColor" red="0.86301428079999998" green="0.8669998646" blue="0.87400943040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="6RU-Ji-3Ac">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells>
+                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="33K-CJ-PED" customClass="NewsCell">
+                            <rect key="frame" x="9" y="10" width="357" height="440"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="357" height="440"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="หุ้นไทยวันนี้มีแรงขายทำกำไรในช่วงบ่ายใกล้ปิดตลาด วอลุ่มทะลักแสนล้าน" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-Ky-gWp">
+                                        <rect key="frame" x="18" y="10" width="322" height="43"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 February at 20:05" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-LA-5AL">
+                                        <rect key="frame" x="18" y="53" width="321.5" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-xR-ufX">
+                                        <rect key="frame" x="18" y="72" width="321.5" height="78"/>
+                                        <string key="text">สรุปภาวะตลาดหุ้นไทย (SET) วันอังคารที่ 27 กุมภาพันธ์ 2561 ปิดที่ 1,830.39 จุด ปรับตัวลดลง -3.79 จุด คิดเป็น -0.21% จุดสูงสุดอยู่ที่ 1,852.51 จุด จุดต่ำสุดอยู่ที่ 1,830.03 จุด โดยมีมูลค่าการซื้อขายอยู่ที่ 103,676.37 ล้านบาท ส่วนดัชนี SET50 ปิดที่ 1,205.90 จุด ปรับตัวลดลง -0.41 จุด</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="xcw-aI-LEr">
+                                        <rect key="frame" x="18" y="157.5" width="321" height="213.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xcw-aI-LEr" secondAttribute="height" multiplier="325:216" id="u3h-9U-HAO"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="fpI-LA-5AL" firstAttribute="top" secondItem="6tS-Ky-gWp" secondAttribute="bottom" id="0yO-pF-JaC"/>
+                                <constraint firstItem="6tS-Ky-gWp" firstAttribute="top" secondItem="33K-CJ-PED" secondAttribute="top" constant="10" id="1MW-3U-1ag"/>
+                                <constraint firstItem="NVc-xR-ufX" firstAttribute="width" secondItem="fpI-LA-5AL" secondAttribute="width" id="5cJ-gW-Dmw"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xcw-aI-LEr" secondAttribute="bottom" multiplier="1.05" id="98q-PW-aho"/>
+                                <constraint firstItem="NVc-xR-ufX" firstAttribute="leading" secondItem="fpI-LA-5AL" secondAttribute="leading" id="GJ9-Uh-bBN"/>
+                                <constraint firstItem="xcw-aI-LEr" firstAttribute="width" secondItem="33K-CJ-PED" secondAttribute="width" multiplier="0.9" id="Lk1-h0-DTg"/>
+                                <constraint firstItem="fpI-LA-5AL" firstAttribute="leading" secondItem="6tS-Ky-gWp" secondAttribute="leading" id="PpP-jO-nd5"/>
+                                <constraint firstItem="6tS-Ky-gWp" firstAttribute="centerX" secondItem="33K-CJ-PED" secondAttribute="centerX" id="RQN-bN-gjJ"/>
+                                <constraint firstItem="xcw-aI-LEr" firstAttribute="top" secondItem="NVc-xR-ufX" secondAttribute="bottom" multiplier="1.05" id="S0x-O3-cd9"/>
+                                <constraint firstItem="fpI-LA-5AL" firstAttribute="width" secondItem="6tS-Ky-gWp" secondAttribute="width" id="arC-GQ-k9f"/>
+                                <constraint firstItem="NVc-xR-ufX" firstAttribute="top" secondItem="fpI-LA-5AL" secondAttribute="bottom" multiplier="1.1" id="bNr-Jh-fWP"/>
+                                <constraint firstItem="xcw-aI-LEr" firstAttribute="centerX" secondItem="33K-CJ-PED" secondAttribute="centerX" id="eap-aB-j7o"/>
+                                <constraint firstItem="6tS-Ky-gWp" firstAttribute="width" secondItem="33K-CJ-PED" secondAttribute="width" multiplier="0.9" id="ed2-f7-0x4"/>
+                            </constraints>
+                            <size key="customSize" width="357" height="440"/>
+                            <connections>
+                                <outlet property="dateLabel" destination="fpI-LA-5AL" id="63T-EW-O1s"/>
+                                <outlet property="detailLabel" destination="NVc-xR-ufX" id="17F-Wo-e6b"/>
+                                <outlet property="newsPic" destination="xcw-aI-LEr" id="n9a-yu-OdY"/>
+                                <outlet property="titleLabel" destination="6tS-Ky-gWp" id="k9w-x7-8Ze"/>
+                            </connections>
+                        </collectionViewCell>
+                    </cells>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rBe-C5-t4M"/>
+                        <outlet property="delegate" destination="-1" id="jtr-zQ-MsX"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5Lm-Xg-Fas" firstAttribute="leading" secondItem="xX1-Nc-OTK" secondAttribute="leading" id="1rd-mv-6DF"/>
+                <constraint firstItem="xX1-Nc-OTK" firstAttribute="top" secondItem="DcX-UJ-p4L" secondAttribute="top" id="4gM-hY-pgg"/>
+                <constraint firstItem="DcX-UJ-p4L" firstAttribute="leading" secondItem="xX1-Nc-OTK" secondAttribute="leading" id="H4q-42-52f"/>
+                <constraint firstItem="5Lm-Xg-Fas" firstAttribute="top" secondItem="DcX-UJ-p4L" secondAttribute="bottom" id="IJu-eZ-teD"/>
+                <constraint firstItem="DcX-UJ-p4L" firstAttribute="width" secondItem="iJ1-mC-fwM" secondAttribute="width" id="Ynj-Gm-yKK"/>
+                <constraint firstItem="5Lm-Xg-Fas" firstAttribute="trailing" secondItem="xX1-Nc-OTK" secondAttribute="trailing" id="lpa-0f-Z8G"/>
+                <constraint firstItem="5Lm-Xg-Fas" firstAttribute="bottom" secondItem="xX1-Nc-OTK" secondAttribute="bottom" id="ofn-3n-5lj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="xX1-Nc-OTK"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="1" width="650" height="432"/>
+        <image name="Home_letter" width="51" height="36"/>
+        <image name="Home_logo" width="239" height="69"/>
+        <image name="Home_sidemenu" width="59" height="50"/>
+    </resources>
+</document>
